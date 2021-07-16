@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./src/Imagens/recife.png">
+    <link rel="stylesheet" href="./src/reset.css">
+    <link rel="stylesheet" href="./src/style.css">
+    <title>Lig-4</title>
+</head>
+
+<body>
+
+    <div id="selectplayer">
+        <div class="initialinformations">
+            <h1>Bem vindo ao <img src="./src/Imagens/title.png" alt="" class="lig4"></h1>
+            <p>
+                O jogo é uma espécie de jogo da velha, que consiste em bóias vermelhas e azuis, e um tabuleiro. O objetivo do jogo é ir colocando as bóias, até que um jogador consiga colocar 4 bóias em linha (podendo ser na horizontal, na vertical ou diagonal), e impedir que o adversário consiga o mesmo.
+            </p>
+            <div class="players">
+                <div class="inputplayer">
+                    Player 1:
+                    <input type="text" name="player1" id="player1" placeholder="Digite o seu nome">
+                </div>
+                <div class="inputplayer">
+                    Player 2:
+                    <input type="text" name="player2" id="player2" placeholder="Digite o seu nome">
+                </div>
+            </div>
+            <input type="submit" value="Jogar!" id="playnow">
+        </div>
+
+    </div>
+
+    <div id="title"></div>
+    <div id="container">
+        <div id="content">
+        </div>
+    </div>
+
+    <div id="modal">
+        <div>
+            <h1><span id="whoWins"></span></h1>
+            <button id="restartgame">Jogar novamente</button>
+        </div>
+    </div>
+    <footer>
+        <p>By Pablo H. Damini</p>
+        <p>at Kenzie Academy Brasil</p>
+    </footer>
+
+    <audio src="" id="sound"></audio>
+    <audio src="" id="backgroundSong" loop></audio>
+    <script src="src/script.js"></script>
+</body>
+
+</html>

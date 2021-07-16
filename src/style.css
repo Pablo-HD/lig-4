@@ -1,0 +1,352 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
+
+body {
+    background-image: url("./Imagens/background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    overflow: hidden;
+    font-family: "Fira Code", monospace;
+}
+
+footer {
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    line-height: 1rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    margin-top: 15px;
+}
+
+#selectplayer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100vh;
+    background-image: url(./Imagens/background2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#selectplayer .initialinformations {
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    background-color: rgba(112, 236, 236, 0.596);
+    height: 100vh;
+}
+
+#selectplayer img {
+    width: 20vw;
+    max-width: 150px;
+}
+
+#selectplayer h1 {
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+#selectplayer p {
+    text-align: justify;
+    margin: 15px auto 25px;
+    width: 70vw;
+    line-height: 25px;
+}
+
+#selectplayer input[type="text"] {
+    margin-top: 3px;
+    margin-bottom: 3vh;
+    border-radius: 5px;
+    border-color: rgb(240, 227, 227);
+}
+
+#playnow {
+    padding: 8px 65px 8px;
+    border-radius: 10px;
+    box-shadow: inset 0px -3px 7px 0px #29bbff;
+    background: linear-gradient(to bottom, #2dabf9 5%, #0688fa 100%);
+    background-color: #2dabf9;
+    border-radius: 3px;
+    border: 1px solid #0b0e07;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 20px;
+    text-shadow: 0px 1px 0px #263666;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+#playnow:hover {
+    background: linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%);
+    background-color: #0688fa;
+}
+
+
+#modal {
+    display: none;
+    background-image: url("./Imagens/Vitoria.gif");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background-color: #7fffd4b2;
+    transform: translate(-50%, -50%);
+}
+
+#modal>div {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    height: 60%;
+}
+
+#modal h1 {
+    margin-top: 35px;
+    font-size: 2rem;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    color: #444;
+}
+
+#modal button {
+    padding: 1rem;
+    margin-top: 30px;
+    border: 3px solid #444;
+    border-radius: 10px;
+    background-color: transparent;
+    color: #444;
+    font-weight: bold;
+}
+
+.red {
+    color: rgba(255, 0, 0, 0.651);
+}
+
+.blue {
+    color: rgb(21, 21, 187);
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#title {
+    background-image: url("./Imagens/title.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 25vw;
+    height: 10vh;
+    margin: 15px auto 15px;
+}
+
+.ballB {
+    background-image: url("./Imagens/ballB.png");
+    background-size: 6vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 6vh;
+    height: 6vh;
+    box-sizing: border-box;
+}
+
+.ballR {
+    background-image: url("./Imagens/ballR.png");
+    background-size: 6vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 6vh;
+    height: 6vh;
+    box-sizing: border-box;
+    border-radius: 100%;
+}
+
+#content {
+
+    display: flex;
+    justify-content: center;
+}
+
+.colum {
+    background-image: url("./Imagens/bubbles.gif");
+    background-position: center;
+    background-size: 250%;
+    background-repeat: initial;
+    display: flex;
+    flex-flow: column-reverse nowrap;
+    align-items: center;
+    width: 10vw;
+    height: 70vh;
+    box-sizing: border-box;
+    padding: 15px;
+    cursor: pointer;
+    border-style: solid;
+    border-width: 1px;
+    border-image:
+        linear-gradient(to bottom,
+        rgba(255, 0, 0, 0) ,rgba(112, 236, 236, 0.219)
+            ) 1 100%;
+
+}
+
+.colum:hover {
+    background-color: rgba(64, 207, 207, 0.438);
+    border-radius: 10px;
+}
+
+.dropDown {
+    animation-name: dropball;
+    animation-duration: 500ms;
+}
+
+@keyframes dropball {
+    from {
+        margin-bottom: 15vh;
+        opacity: 0;
+    }
+
+    to {
+        margin-bottom: 0;
+        opacity: 1;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    footer {
+        position: absolute;
+        bottom: 25px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    body {
+        background-image: url("./Imagens/background.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    #container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #title {
+        background-image: url("./Imagens/title.png");
+        background-size: contain;
+        background-position: center;
+        width: 30vw;
+        margin: 5px auto 25px;
+    }
+
+    .ballB {
+        background-image: url("./Imagens/ballB.png");
+        background-position: center;
+        background-size: contain;
+        width: 5vw;
+        max-width: 40px;
+        height: 5vw;
+        max-height: 40px;
+    }
+
+    .ballR {
+        background-size: 10vw;
+        background-image: url("./Imagens/ballR.png");
+        background-position: center;
+        background-size: contain;
+        width: 5vw;
+        max-width: 40px;
+        height: 5vw;
+        max-height: 40px;
+    }
+
+    .colum {
+        background-image: url("./Imagens/bubbles.gif");
+        background-position: center;
+        background-size: 250%;
+        background-repeat: initial;
+        display: flex;
+        flex-flow: column-reverse nowrap;
+        align-items: center;
+        width: 8vw;
+        max-width: 70px;
+        border-style: solid;
+        border-width: 2px;
+        border-image:
+            linear-gradient(to bottom,
+            rgba(255, 0, 0, 0) ,rgba(112, 236, 236, 0.219)
+                ) 1 100%;
+    }
+
+    #content {
+        display: flex;
+        box-sizing: border-box;
+        justify-content: center;
+    }
+
+    #modal {
+        display: none;
+        background-image: url("./Imagens/Vitoria.gif");
+        background-repeat: no-repeat;
+        background-position: bottom;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #modalempate {
+        display: none;
+        /* background-image: url("./Imagens/Vitoria.gif"); */
+        background-repeat: no-repeat;
+        background-position: bottom;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #modal>div {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+        height: 60%;
+    }
+
+    footer {
+        font-size: 15px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        line-height: 1.5rem;
+        text-transform: uppercase;
+        text-align: center;
+        color: white;
+    }
+}
